@@ -1,0 +1,38 @@
+/* uygulama: 
+    1-Rasgele 0-100 arasında üretilen değerin tek veya çift olduğunu ekrana yazdırınız. 
+    2-Rasgele 0-100 arasında üretilen değerin 50'den küçük olduğu durumlarda kaldınız, büyükse geçtiniz yazdırınız.
+    3-Doğum yılına göre 18 yaşından büyük olanların ehliyet alabileceğini kontrol eden if bloğunu yazınız. */
+     <?php
+
+    echo "<hr>";
+    echo "<h3>1.Soru</h3>";
+    echo " 1-Rasgele 0-100 arasında üretilen değerin tek veya çift olduğunu ekrana yazdırınız.";
+    $sayi1 = rand(0, 100);
+
+    if (fmod($sayi1, 2) == 0) {
+        echo "$sayi1 sayısı çift sayıdır.";
+    } else {
+        echo "$sayi1 sayısı tek sayıdır.";
+    }
+    echo "<hr>";
+    echo "<h3>2.Soru</h3>";
+    echo " 2-Rasgele 0-100 arasında üretilen değerin 50'den küçük olduğu durumlarda kaldınız, büyükse geçtiniz yazdırınız.";
+    if ($sayi1 <= 50) {
+        echo "Kaldiniz";
+    } else {
+        echo "Geçtiniz";
+    }
+    echo "<hr>";
+    echo "<h3>3.Soru</h3>";
+    echo "3-Doğum yılına göre 18 yaşından büyük olanların ehliyet alabileceğini kontrol eden if bloğunu yazınız.";
+    $sayi2 = rand(0, 25);
+    echo "Girilen Yas= $sayi2 <br>";
+    if ($sayi2 <= 18) {
+        $kalanYil = 18 - $sayi2;
+        echo $kalanYil . "yil sonra ehliyet alabilirsiiniz.";
+    } else {
+        echo "Ehliyet alabilirsiniz.";
+    }
+
+
+    ?>
